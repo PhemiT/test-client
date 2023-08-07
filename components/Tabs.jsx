@@ -11,7 +11,7 @@ const Tabs = () => {
         border: '0.1px solid transparent',
         borderRadius: '50px',
         fontWeight: '500',
-        fontSize: '118%',
+        fontSize: {xs: '70%', md: '118%'},
         backgroundColor: '#000',
         color: '#fff',
         padding: '10px 20px',
@@ -24,8 +24,9 @@ const Tabs = () => {
     <div>
         <Box
         sx={{
-            padding: '20px 45px',
+            padding: {xs: '20px 25px', md: '20px 45px'},
             display: 'flex',
+            justifyContent: { xs: 'center', sm: 'flex-start'},
             gap: '15px'
         }}
         >
@@ -53,8 +54,8 @@ const Tabs = () => {
             >
                 Grocery
             </Button>
-        </Box>
             <Divider />
+        </Box>
     </div>
   )
 }

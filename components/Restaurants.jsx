@@ -1,21 +1,51 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Card from './Card';
-import { Box, Divider, Grid, Typography } from '@mui/material';
-import axios from 'axios';
+import { Box, Button, Divider, Grid, Typography } from '@mui/material';
+import theme from '../src/theme';
 
 const Restaurants = (props) => {
+    const buttonStyles = {
+        boxShadow: 'none',
+        transition: 'all 400ms ease',
+        textTransform: 'capitalize',
+        fontWeight: '800',
+        color: theme.palette.error.main,
+        height: '35px',
+        '&:hover': {
+            boxShadow: 'none',
+            backgroundColor: '#f0f0f0'
+        }
+    }
   return (
     <div>
         <Box>
             <Divider />
-            <Typography variant='h4' mt='25px'sx={{
-                fontWeight: '700'
+            <Box
+            sx={{
+                display: 'flex',
+                alignItems: 'center',
+                mt: '25px',
+                gap: '7px'
             }}>
-                All Restaurants
-            </Typography>
+                <Typography variant='h4' sx={{
+                    fontWeight: '700',
+                    fontSize: {xs: '100%', sm: '150%', md: '212%'}
+                }}>
+                    {props.heading}
+                </Typography>
+                {
+                    props.heading !== 'All Restaurants' &&
+                    (
+                    <Button variant='contained' onClick={props.reset} sx={{...buttonStyles}}>
+                        Reset
+                    </Button>
+                    )
+                }
+            </Box>
             <Grid container spacing={3}
             sx={{
-                my: '25px'
+                my: '25px',
+                width: '100%'
             }}
             >
                 {

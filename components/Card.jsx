@@ -19,12 +19,14 @@ const Card = (props) => {
         >
             <Box 
             component="img" 
-            src="/img.png" 
+            src="/img.jpg" 
             alt="restaurant image" 
             sx={{ 
                 width: '100%', 
                 height: '100px', 
                 objectFit: 'cover',
+                border: '1px solid transparent',
+                borderRadius: '8px'
             }} 
             />
             <Typography variant='h5' sx={{

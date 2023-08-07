@@ -18,7 +18,8 @@ const Sorting = (props) => {
     }}
     >
         <Typography variant='h4' sx={{
-            fontWeight: '700'
+            fontWeight: '700',
+            fontSize: {xs: '100%', sm: '150%', md: '212%'}
         }}>
             All Stores
         </Typography>
@@ -35,7 +36,7 @@ const Sorting = (props) => {
                 gap: '10px',
                 mt: '25px',
                 color: '#000',
-                fontSize: '170%'
+                fontSize: {xs: '110%', sm: '120%', md: '170%'}
             }}
             >
                 <SortIcon /> Sort

@@ -8,6 +8,12 @@ import { SearchRounded } from '@mui/icons-material';
 
 
 const Navbar = (props) => {
+    const buttonStyles = {
+        boxShadow: 'none',
+        transition: 'all 400ms ease',
+        textTransform: 'capitalize',
+        fontWeight: '800',
+    }
   return (
     <>
     <AppBar
@@ -17,13 +23,13 @@ const Navbar = (props) => {
         display: 'yflex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '10px 45px',
+        padding: {xs: '10px 25px', md: '10px 45px'},
         borderBottom: '1px solid #f0f0f0'
          }}>
         <Box sx={{ 
-            display: 'inline-flex',
+            display: 'flex',
             alignItems: 'center',
-            gap: 5
+            gap: { sm: '15px', md: '35px'}
              }}>
             <MenuIcon />
             <Hidden smDown>
@@ -33,10 +39,7 @@ const Navbar = (props) => {
             variant="contained" 
             startIcon={<LocationOnIcon />}
             sx={{
-                boxShadow: 'none',
-                transition: 'all 400ms ease',
-                textTransform: 'capitalize',
-                fontWeight: '800',
+                ...buttonStyles,
                 fontSize: '0.875rem',
                 '&:hover': {
                     boxShadow: 'none',
@@ -87,10 +90,7 @@ const Navbar = (props) => {
             <Button 
             variant="contained" 
             sx={{
-                boxShadow: 'none',
-                transition: 'all 400ms ease',
-                textTransform: 'capitalize',
-                fontWeight: '800',
+                ...buttonStyles,
                 display: {xs: 'none', md: 'block'},
                 '&:hover': {
                     boxShadow: 'none',
@@ -102,12 +102,8 @@ const Navbar = (props) => {
             </Button>
             <Button 
             variant="contained" 
-            /* startIcon={} */
             sx={{
-                boxShadow: 'none',
-                transition: 'all 400ms ease',
-                textTransform: 'capitalize',
-                fontWeight: '800',
+                ...buttonStyles,
                 backgroundColor: '#000',
                 padding: '7px 20px',
                 color: '#fff',

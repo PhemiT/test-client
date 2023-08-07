@@ -2,9 +2,6 @@ import React from 'react';
 import { Box, Grid, IconButton } from '@mui/material';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import { ArrowForwardRounded } from '@mui/icons-material';
-import Bodija from '../assets/img/bodija.PNG';
-import Feedwell from '../assets/img/feedwell.PNG'
-import Abeokuta from '../assets/img/abeokuta.PNG'
 
 const Scrolled = () => {
     const buttonStyles = {
